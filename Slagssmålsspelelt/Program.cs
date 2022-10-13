@@ -14,11 +14,8 @@ while (fighter.hp > 0 && beast.hp > 0)
 {
   Console.WriteLine("\n NEW ROUND");
   Console.WriteLine($"{fighter.name}: {fighter.hp} || {beast.name}: {beast.hp}\n");
-
   fighter.Attack(beast);
   beast.Attack(fighter);
-
-  Console.WriteLine("Tryck på Enter för att SLÅSS");
   Console.ReadKey();
 }
 

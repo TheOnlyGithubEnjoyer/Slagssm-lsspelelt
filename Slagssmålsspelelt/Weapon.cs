@@ -12,6 +12,6 @@ public class Fists
 
   public int GetDamage()
   {
-    return generator.Next(5, 30);
+    return generator.Next(10, 35);
   }
 }
