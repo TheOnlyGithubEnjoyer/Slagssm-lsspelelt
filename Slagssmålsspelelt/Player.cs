@@ -11,6 +11,6 @@ public class Fighter
     int damage = fist.GetDamage();
     fighter.hp -= damage;
     fighter.hp = Math.Max(0, fighter.hp);
-    Console.WriteLine($"{name} AlMOST KNOCKS OUT {fighter.name} WITH {damage}");
+    Console.WriteLine($"\n {name} AlMOST KNOCKS OUT {fighter.name} WITH {damage}");
   }
 }
