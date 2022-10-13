@@ -9,6 +9,7 @@ beast.fist = new Fists();
 
 Random generator = new Random();
 
+
 Console.WriteLine("What is you name solider?");
 string fighterName;
 fighterName = Console.ReadLine();
@@ -23,7 +24,7 @@ while (fighter.hp > 99 && beast.hp > 99)
   Console.ReadKey();
 }
 
-while (fighter.hp < 99 && beast.hp < 99 && fighter.hp > 0 && fighter.hp > 0)
+while (fighter.hp < 99 && beast.hp < 99 && fighter.hp > 0 && beast.hp > 0)
 {
   Console.WriteLine("\n | NEXT ROUND |");
   Console.WriteLine($"\n {fighterName}: {fighter.hp} | {beast.name}: {beast.hp}");
@@ -39,13 +40,13 @@ if (fighter.hp == 0 && beast.hp == 0)
 {
   Console.WriteLine("\n | ITS A TIE! |");
 }
-else if (fighter.hp == 0)
+else if (fighter.hp == 0 && beast.hp > 0)
 {
   Console.WriteLine($"\n {beast.name} WON!");
 }
-else
+else if (beast.hp == 0 && fighter.hp > 0)
 {
-  Console.WriteLine($"\n {fighterName} WON!");
+  Console.WriteLine($"\n {fighter.name} WON!");
 }
 
 Console.WriteLine("\n | PRESS ENTER TO STOP THE FIGHT! |");
